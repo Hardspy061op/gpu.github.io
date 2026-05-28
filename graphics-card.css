@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oi&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow: hidden;
+}
+@keyframes pinkGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes blueGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes grayGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.header1 {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  animation: pinkGradientShift 6s ease-in-out infinite;
+  height: 5vh;
+  position: sticky;
+  top: 0;
+}
+.menue-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5vh;
+}
+.menue-bar:hover {
+  cursor: pointer;
+}
+.setting-button1 {
+  background: linear-gradient(
+    135deg,
+    rgb(245, 245, 245),
+    rgb(150, 150, 150),
+    rgb(55, 55, 55)
+  );
+  background-size: 300% 300%;
+  animation: grayGradientShift 6s ease-in-out infinite;
+  margin-top: 0.5vh;
+  height: 3.5vh;
+  width: 3.5vh;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transform: rotate(45deg);
+  display: flex;
+  z-index: 200;
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  transition: transform 0.5s ease;
+}
+.setting-button2 {
+  background-color: black;
+  margin-top: 0.5vh;
+  height: 3.5vh;
+  width: 3.5vh;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  transition: transform 0.5s ease;
+}
+.dot {
+  height: 0.5vh;
+  width: 0.5vh;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5vh;
+  left: 1.5vh;
+}
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  animation: pinkGradientShift 6s ease-in-out infinite;
+  height: 100vh;
+  width: 50%;
+  position: fixed;
+  left: -100%;
+  transition: left 0.5s ease;
+}
+.side-bar.active {
+  left: 0;
+  transition: left 0.5s ease;
+}
+.setting-button1.active {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
+}
+.setting-button2.active {
+  transform: rotate(45deg);
+  transition: transform 0.5s ease;
+}
+.main-heading {
+  font-family: "Chewy", system-ui;
+  display: flex;
+  color: white;
+  font-size: 15px;
+  gap: 2vh;
+  justify-content: center;
+  align-items: center;
+}
+.main-heading h1:hover {
+  color: aqua;
+  transition: 1color 0.5s ease-in;
+  cursor: pointer;
+}
+#please1 {
+  background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  /* animation: majee 10s ease in; */
+  animation: pinkGradientShift 6s ease-in-out infinite;
+  height: 30vh;
+  width: 30vh;
+  border-radius: 5px;
+  position: fixed;
+  left: -100%;
+  transform: rotate(10deg);
+  z-index: 999;
+}
+#please1.active {
+  top: 15vh;
+  left: 15vh;
+}
+#please2 {
+  background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  /* animation: majee 10s ease in; */
+  animation: pinkGradientShift 6s ease-in-out infinite;
+  height: 30vh;
+  width: 30vh;
+  border-radius: 5px;
+  position: fixed;
+  left: -100%;
+  transform: rotate(45deg);
+  z-index: 999;
+}
+#please2.active {
+  top: 13vh;
+  left: 15vh;
+}
+#please3 {
+  background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  /* animation: majee 10s ease in; */
+  animation: pinkGradientShift 6s ease-in-out infinite;
+  height: 30vh;
+  width: 30vh;
+  border-radius: 5px;
+  position: fixed;
+  left: -100%;
+  transform: rotate(-10deg);
+  z-index: 999;
+}
+#please3.active {
+  top: 18vh;
+  left: 15vh;
+}
+#please1 h1,
+#please2 h1,
+#please3 h1 {
+  font-family: "Moo Lah Lah", system-ui;
+  text-align: center;
+  color: white;
+  text-shadow: 7px 7px 7px blue;
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+  margin-top: 2vh;
+}
+#please1 button,
+#please2 button,
+#please3 button {
+  background: linear-gradient(
+    135deg,
+    rgb(173, 216, 255),
+    rgb(64, 145, 255),
+    rgb(18, 61, 145)
+  );
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 35vw;
+  height: 3.5vh;
+  border-radius: 5px;
+}
+#please1,
+#please2,
+#please3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+@keyframes majee {
+  10% {
+    transform: rotate(10deg);
+    height: 7vh;
+    width: 20vw;
+    background-color: red;
+    background: linear-gradient(
+      135deg,
+      rgb(173, 216, 255),
+      rgb(64, 145, 255),
+      rgb(18, 61, 145)
+    );
+    background-size: 300% 300%;
+    animation: blueGradientShift 6s ease-in-out infinite;
+  }
+  20% {
+    transform: rotate(20deg);
+    height: 2vh;
+    width: 50vw;
+    background-color: yellow;
+    color: black;
+  }
+  40% {
+    transform: rotate(10deg);
+    height: 7vh;
+    width: 20vw;
+    background-color: purple;
+    color: red;
+  }
+  60% {
+    transform: rotate(-10deg);
+    height: 2vh;
+    width: 50vw;
+    background-color: aqua;
+    color: purple;
+  }
+  80% {
+    transform: rotate(-20deg);
+    height: 7vh;
+    width: 20vw;
+    background-color: black;
+    color: white;
+  }
+  100% {
+    transform: rotate(0deg);
+    width: 35vw;
+    height: 3.5vh;
+    background-color: white;
+    color: aqua;
+  }
+}
+.plez {
+  color: white;
+  font-family: "Chewy", system-ui;
+  font-size: 5vh;
+  margin-top: 5vh;
+}
+.plez:hover {
+  transition: color 0.5s ease;
+  background: linear-gradient(
+    135deg,
+    rgb(173, 216, 255),
+    rgb(64, 145, 255),
+    rgb(18, 61, 145)
+  );
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+  cursor: pointer;
+}
+
+#plez1 {
+  background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  animation: pinkGradientShift 6s ease-in-out infinite;
+  height: 30vh;
+  width: 30vh;
+  border-radius: 5px;
+  position: absolute;
+  left: -100%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border: 2px solid white;
+}
+#plez1.active {
+  top: 20vh;
+  left: 20vh;
+}
+#plez1 h1 {
+  font-family: "Moo Lah Lah", system-ui;
+  text-align: center;
+  color: white;
+  text-shadow: 7px 7px 7px blue;
+  margin-top: 2vh;
+}
+#plez1 button {
+  background: linear-gradient(
+    135deg,
+    rgb(173, 216, 255),
+    rgb(64, 145, 255),
+    rgb(18, 61, 145)
+  );
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 35vw;
+  height: 3.5vh;
+  border-radius: 5px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgb(245, 245, 245),
+    rgb(150, 150, 150),
+    rgb(55, 55, 55)
+  );
+  background-size: 300% 300%;
+  animation: grayGradientShift 6s ease-in-out infinite;
+  margin-top: 2vh;
+  width: 100%;
+  height: 50vh;
+  gap: 2vh;
+}
+main h1 {
+  font-size: 3vh;
+  font-family: "Oi", sans-serif;
+  color: aqua;
+  text-shadow: 5px 5px 5px blue;
+  margin-top: 1vh;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 3vh;
+}
+.buttons button {
+  background: linear-gradient(
+    135deg,
+    rgb(173, 216, 255),
+    rgb(64, 145, 255),
+    rgb(18, 61, 145)
+  );
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+  border: none;
+  color: white;
+  font-size: 4vh;
+  width: 60vw;
+  height: 9vh;
+  border-radius: 7px;
+}
+.dont-talk {
+  background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  animation: pinkGradientShift 6s ease-in-out infinite;
+  height: 30vh;
+  width: 30vh;
+  border-radius: 5px;
+  position: absolute;
+  left: -100%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border: 2px solid white;
+}
+.dont-talk p {
+  font-family: "Moo Lah Lah", system-ui;
+  text-align: center;
+  color: white;
+  text-shadow: 7px 7px 7px blue;
+  margin-top: 2vh;
+  font-size: 8vh;
+}
+.dont-talk button {
+  background: linear-gradient(
+    135deg,
+    rgb(173, 216, 255),
+    rgb(64, 145, 255),
+    rgb(18, 61, 145)
+  );
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 35vw;
+  height: 3.5vh;
+  border-radius: 5px;
+}
+.dont-talk.active {
+  top: 20vh;
+  left: 13vh;
+}
+footer {
+  display: flex;
+  margin-top: 35vh;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-family: "Oswald", sans-serif;
+}

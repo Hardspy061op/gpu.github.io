@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+@keyframes pinkGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes blueGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.paragraph{
+    font-size: 3.5vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    font-family: "Oswald", sans-serif;
+    text-shadow: 3px 3px 5px blue;
+}
+.boxes{
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 5vh;
+    gap: 5vh;
+}
+.box1 button, .box2 button, .box3 button, .box4 button, .box5 button, .box6 button, .box7 button, .box8 button, .box9 button, .box10 button, .box11 button, .box12 button{
+    background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  animation: pinkGradientShift 6s ease-in-out infinite;
+    display: flex;
+    margin-left: 2vh; 
+    justify-content:center;
+    align-items: center;   
+    height: 8vh;
+    width: 40vw;
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: "Oi", serif;
+}
+.box1 button:hover, .box2 button:hover, .box3 button:hover, .box4 button:hover, .box5 button:hover, .box6 button:hover, .box7 button:hover, .box8 button:hover, .box9 button:hover, .box10 button:hover, .box11 button:hover, .box12 button:hover{
+    background: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background: linear-gradient(
+    135deg,
+    rgb(173, 216, 255),
+    rgb(64, 145, 255),
+    rgb(18, 61, 145)
+  );
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+    cursor: pointer;
+    color: black;
+    cursor: pointer;
+}
+.box1 button:active, .box2 button:active, .box3 button:active, .box4 button:active, .box5 button:active, .box6 button:active, .box7 button:active, .box8 button:active, .box9 button:active, .box10 button:active, .box11 button:active, .box12 button:active{
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background: linear-gradient(
+    135deg,
+    rgb(173, 216, 255),
+    rgb(64, 145, 255),
+    rgb(18, 61, 145)
+  );
+  background-size: 300% 300%;
+  animation: blueGradientShift 6s ease-in-out infinite;
+    cursor: pointer;
+    color: black;
+    font-size: 2vh;
+    height: 7vh;
+    width: 38vw;
+}
+.not-possible, .is-possible, .too-early{
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 60vh;
+    margin: 0 67px;
+    background-color: aqua;
+    height: 15vh;
+    width: 80vw;
+    font-size: 3.5vh;
+    border-radius: 10px;
+    color: white;
+    gap: 4px;
+    font-family: "Chewy", system-ui;
+    display: none;
+}
+.accept{
+    background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  animation: pinkGradientShift 6s ease-in-out infinite;
+    color: white;
+    border-radius: 5px;
+    font-size: 3vh;
+    width: 17vw;
+    cursor: pointer;
+}
+.accept:hover{
+    transition: color 0.5s ease, background-color 0.5s ease; 
+    background-color: white;
+    background: linear-gradient(
+    135deg,
+    rgb(255, 185, 196),
+    rgb(233, 88, 112),
+    rgb(150, 32, 55)
+  );
+  background-size: 300% 300%;
+  animation: pinkGradientShift 6s ease-in-out infinite;
+}
+.not-possible.active, .is-possible.active, .too-early.active{
+    display: flex;
+}
